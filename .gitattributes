@@ -1,3 +1,2 @@
-* linguist-vendored
-*.objective-c linguist-vendored=false
-*.js linguist-detectable=true
+*.objective-c linguist-detectable=false
+*.js linguist-detectable=false
