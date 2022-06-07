@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons left>
+        <button (click)="close()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-buttons>
+    <ion-title>
+      Pay
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page6">
+  <form id="pay-form5">
+    <ion-item id="pay-input7">
+      <ion-input  (input)="getAmt($event)" (ionBlur)="checkBlur()" type="tel" [(ngModel)]="sendUser.amount" name="amount" placeholder="Amount:"></ion-input>
+    </ion-item>
+    <ion-item id="pay-input8">
+      <ion-label></ion-label>
+      <ion-input placeholder="Pay to:" type="text" (click)="goToSearchPage()" disabled></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input style="font-weight: bold;" disabled [(ngModel)]="selectedUser" name="username">{{selectedUser}}</ion-input>
+    </ion-item>
+    <!-- <ion-item id="pay-input9">
+      <ion-label></ion-label>
+      <ion-input type="text" [(ngModel)]="sendUser.message" name="message" placeholder="Type a message"></ion-input>
+    </ion-item> -->
+  </form>
+  <div class="spacer" style="width:300px;height:269px;" id="pay-spacer4"></div>
+  <button id="pay-button17" ion-button [disabled]="!isEnabled" color="positive" block on-click="goToReviewTransaction()">
+    Next
+  </button>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Top-up
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page13">
+  <form id="topUp-form10">
+    <ion-item>
+      <ion-input (input)="getAmt($event)" (ionBlur)="checkBlur()" [(ngModel)]="user2.amount" name="amount" type="tel" placeholder="Amount:"></ion-input>
+    </ion-item>
+  </form>
+  <button id="pay-button17" ion-button [disabled]="!isEnabled" color="positive" block (click)="cfmTopup()">
+    Submit
+  </button>
+</ion-content>

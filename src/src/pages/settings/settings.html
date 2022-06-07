@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Settings
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page5">
+  <button id="settings-button13" ion-button outline color="dark" block icon-left on-click="goToEditPassword()">
+    <ion-icon name="lock"></ion-icon>
+    Edit Password
+  </button>
+  <button id="settings-button14" ion-button outline color="dark" block icon-left>
+    <ion-icon name="phone-portrait"></ion-icon>
+    Edit Mobile Number
+  </button>
+  <button id="settings-button15" ion-button outline color="dark" block icon-left on-click="goToManageAddress()">
+    <ion-icon name="home"></ion-icon>
+    Manage Address
+  </button>
+  <button id="settings-button16" ion-button outline color="dark" block icon-left>
+    <ion-icon name="notifications"></ion-icon>
+    Manage Notifications
+  </button>
+  <form id="settings-form4">
+    <ion-item id="settings-toggle1">
+      <ion-label>
+        Fingerprint Login
+      </ion-label>
+      <ion-toggle color="positive" checked="false"></ion-toggle>
+    </ion-item>
+  </form>
+</ion-content>

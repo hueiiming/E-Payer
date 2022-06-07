@@ -1,0 +1,39 @@
+page-payer {
+    #divMain { 
+        width: 500px; 
+    }
+    #left-div { 
+        width: 100px; float: left; background-color: #DC143C; 
+    }
+    #middle-div { 
+        margin-left: 100px; margin-right: 100px; background-color: #DC143C;
+    }
+    #right-div {
+        width: 100px; float: right; background-color: #DC143C;
+    } 
+    #notification-button {            
+        position: relative;
+        width: 42px;
+        top:1px;
+        right: 1px;
+        overflow: visible!important;
+    }
+
+
+    #notifications-badge {
+            background-color: red;
+            position: absolute;
+            top: -3px;
+            right: -3px;
+            border-radius: 100%;
+        }
+    ion-title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0 90px 1px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        }
+}

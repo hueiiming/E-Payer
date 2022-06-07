@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Notifications
+      </ion-title>
+      <ion-buttons left>
+        <button (click)="close()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+    </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+  <ion-content padding id="page14">
+    <ion-list>
+      <ion-item color="none" *ngFor="let user1 of onlyUser1">
+       <h2>Payment received</h2>
+       <p>You received {{user1.moneySent}} from {{user1.fromUsername}}</p>
+       <h6>on {{user1.date}} at {{user1.time}}</h6>
+        <ion-note item-right></ion-note>
+      </ion-item>
+      
+    </ion-list>
+   
+  </ion-content>

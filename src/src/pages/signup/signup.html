@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Signup
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page3">
+  <form id="signup-form2">
+    <ion-list id="signup-list2">
+      <ion-item id="signup-input3">
+        <ion-label>
+          Username
+        </ion-label>
+        <ion-input type="text" placeholder="" [(ngModel)]="user.username" name="username"></ion-input>
+      </ion-item>
+      <ion-item id="signup-input4">
+        <ion-label>
+          Email
+        </ion-label>
+        <ion-input type="email" placeholder="" [(ngModel)]="user.email" name="email"></ion-input>
+      </ion-item>
+      <ion-item id="signup-input5">
+        <ion-label>
+          Password
+        </ion-label>
+        <ion-input type="password" placeholder=""[(ngModel)]="user.password" name="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <div ion-text padding-left color="danger"> {{signupError}}</div>
+    <button id="signup-button3" ion-button color="stable" block (click)="signup()">
+      Sign up
+    </button>
+  </form>
+</ion-content>

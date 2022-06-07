@@ -1,0 +1,5 @@
+npm install ngx-qrcode2 --save
+
+ionic cordova plugin add phonegap-plugin-barcodescanner
+
+npm i -s @ionic-native/barcode-scanner@4.20.0

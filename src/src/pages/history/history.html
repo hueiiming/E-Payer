@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      History
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page14">
+  <ion-list *ngFor="let user of useUser">
+    <ion-item color="none" *ngIf="user.username == currentUsername">
+        <h2>{{user.username}}</h2>
+        <p item-right>S${{user.topupAmount}}</p>
+        <h6>Top up </h6>
+          <ion-note item-right></ion-note>
+    </ion-item>
+    <ion-item color="none" *ngIf="user.fromUsername != currentUsername">
+     <h2>{{user.fromUsername}}</h2>
+     <p item-right>S${{user.moneySent}}</p>
+     <h6>Payment received on {{user.date}} at {{user.time}}</h6>
+      <ion-note item-right></ion-note>
+    </ion-item>
+    <ion-item color="none" *ngIf="user.toUsername != currentUsername">
+      <h2>{{user.toUsername}}</h2>
+      <p item-right style="color:red;">-S${{user.moneySent}}</p>
+      <h6>Payment sent on {{user.date}} at {{user.time}}</h6>
+       <ion-note item-right></ion-note>
+     </ion-item>
+    
+  </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-row>
+        <ion-col no-padding>
+            
+            <button no-margin ion-button block color="light" on-click="goToPayer()">
+              <ion-icon name="home"></ion-icon>
+              &nbsp;
+              Home
+            </button>
+        </ion-col>
+        <ion-col no-padding>
+            <button no-margin ion-button block color="primary">
+              <ion-icon name="time"></ion-icon>
+              &nbsp;
+              History
+            </button>
+        </ion-col>
+        <ion-col no-padding>
+            <button no-margin ion-button block color="light" on-click="goToMore()">
+              <ion-icon name="more"></ion-icon>
+              &nbsp;
+              More
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

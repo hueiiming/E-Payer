@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Review Transaction
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page7">
+  <ion-list id="reviewTransaction-list6">
+    <ion-item color="none" id="reviewTransaction-list-item6">
+      <ion-avatar item-left>
+        <img />
+      </ion-avatar>
+      <h2>
+        {{sendUser.username}}
+      </h2>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+      <p>Pay From</p>
+      <br>
+      <h2>Payer Wallet</h2>
+      <p style="color: grey">Current balance S${{fromUser.moneyBalance}}</p>
+      <h2 item-right>{{sendUser.amount}}</h2>
+      <br>
+      <br>
+    </ion-item>
+    <ion-item>
+      <h2>Total Amount</h2>
+      <h2 item-right><b>{{sendUser.amount}}</b></h2>
+    </ion-item>
+  
+  </ion-list>
+  <p style="color: red">{{errorMessage}}</p>
+  <div class="spacer" style="width:300px;height:351px;" id="reviewTransaction-spacer5"></div>
+  <button id="reviewTransaction-button18" ion-button color="positive" block (click)="update(user)">Next</button>
+</ion-content>

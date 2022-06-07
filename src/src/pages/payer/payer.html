@@ -1,0 +1,86 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        E-Payer
+    </ion-title>
+    <ion-buttons right>
+      <button id="notification-button" ion-button icon-only (click)="goToNotif()"><ion-icon name="notifications-outline">
+        <ion-badge id="notifications-badge" color="danger" *ngIf="notifVal > 0">{{notifVal}}</ion-badge>
+      </ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="page1">
+  <br>
+    <button style="font-size: 17px;" id="payer-button4" ion-button clear color="dark" icon-left on-click="goToPay()">
+      <ion-icon name="send"></ion-icon>
+      Send
+    </button>
+    <button style="font-size: 17px;" id="payer-button5" ion-button clear color="dark" icon-left (click)="scanCode()">
+      <ion-icon name="qr-scanner"></ion-icon>
+      Scan QR
+    </button>
+    <button style="font-size: 17px;" id="payer-button6" ion-button clear color="dark" icon-left (click)="goToQrPage()">
+      <ion-icon name="barcode"></ion-icon>
+      My QR
+    </button> 
+    <hr>
+    <br>
+  <div id="payer-container1">
+    <form id="payer-form3">
+     <div style="display:flex; justify-content:space-between;">   
+        <p><b>Wallet Balance</b>
+          <br> 
+            S${{newUsers.moneyBalance}}
+         </p>   
+        <button id="payer-button7"  (click)="showactionsheet()" ion-button outline color="positive" class="ion-text-end">
+          Manage
+        </button>
+      </div> 
+    </form>
+  </div>
+  
+  <hr>
+  
+  <!-- <div class="spacer" style="width:300px;height:232px;" id="payer-spacer2"></div>
+  <button id="payer-button9" ion-button clear color="dark" icon-left>
+    <ion-icon name="home"></ion-icon>
+    Home
+  </button>
+  <button id="payer-button10" ion-button clear color="dark" icon-left on-click="goToHistory()">
+    <ion-icon name="time"></ion-icon>
+    History
+  </button>
+  <button id="payer-button11" ion-button clear color="dark" icon-left on-click="goToMore()">
+    <ion-icon name="more"></ion-icon>
+    More
+  </button> -->
+  
+</ion-content>
+<ion-footer>
+    <ion-row>
+        <ion-col no-padding>
+            
+            <button no-margin ion-button block color="primary">
+              <ion-icon name="home"></ion-icon>
+              &nbsp;
+              Home
+            </button>
+        </ion-col>
+        <ion-col no-padding>
+            <button no-margin ion-button block color="light" on-click="goToHistory()">
+              <ion-icon name="time"></ion-icon>
+              &nbsp;
+              History
+            </button>
+        </ion-col>
+        <ion-col no-padding>
+            <button no-margin ion-button block color="light" on-click="goToMore()">
+              <ion-icon name="more"></ion-icon>
+              &nbsp;
+              More
+            </button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

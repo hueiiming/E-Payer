@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Profile
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding id="page15">
+  <ion-card>
+    <ion-list>
+      <img [src]="imgSrc" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;"/>
+      <h4>
+        Profile Image
+      </h4>
+      <div>
+        <button ion-button color="positive" (click)="getFromCamera()">
+          Camera
+        </button>
+        <button ion-button color="positive" (click)="getFromAlbum()">
+          Photo Album
+        </button>
+      </div>
+    </ion-list>
+  </ion-card>
+  <button ion-button color="primary" block>
+    Save
+  </button>
+  <ion-item>
+    <ion-label>
+      Username
+    </ion-label>
+    <ion-input type="text" placeholder="No username" [(ngModel)]="user.username" name="username">
+    </ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>
+      Email
+    </ion-label>
+    <ion-input type="email" placeholder="Not signed in" [(ngModel)]="user.email" name="email">
+      
+    </ion-input>
+  </ion-item>
+ 
+</ion-content>
